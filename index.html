@@ -1,10 +1,29 @@
+<!DOCTYPE html>
+
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Meal Dicidophobia?</title>
   </head>
   <body>
-    
+    <header>
+      <h1>What's for Dinner?</h1>
+      <button id="add-recipe-button">ADD A RECIPE</button>
+    </header>
+    <main>
+      <div class="box" id="left-box">
+        <h1>What are you looking for?</h1>
+        <label><input type="radio" name="food" value="side" /> Side </label>        
+        <label><input type="radio" name="food" value="main-dish" /> Main Dish </label>      
+        <label><input type="radio" name="food" value="dessert" /> Dessert </label>
+        <label><input type="radio" name="food" value="entire-meal" /> Entire Meal </label>
+        <button id="lets-cook-button">LET'S COOK!</button>
+      </div>
+      <div class="box" id="right-box">
+        <img src="assets/cookpot.svg">
+      </div>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
