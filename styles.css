@@ -91,13 +91,19 @@ main {
 
 #right-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 #right-box > img {
     width: 40%;
     height: 40%;
-   
+}
+
+#right-box > h1 {
+    font-size: 2em;
+    text-align: center;
 }
 
 
