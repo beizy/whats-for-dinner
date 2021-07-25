@@ -16,11 +16,21 @@ function selected(){
 }
 
 function cook(){
-    var randomFood = foodList[selectedFood][getRandomIndex(foodList[selectedFood])]
-    rightBox.innerHTML = `
+    if (selectedFood !== 'entireMeal'){ 
+        var randomFood = foodList[selectedFood][getRandomIndex(foodList[selectedFood])]
+        rightBox.innerHTML = `
+            <h3><i> How about:</i></h3>
+            <h1>${randomFood}!</h1>`
+    } else {
+        var randomSide = foodList.side[getRandomIndex(foodList.side)]
+        var randomMainDish = foodList.mainDish[getRandomIndex(foodList.mainDish)]
+        var randomDessert = foodList.dessert[getRandomIndex(foodList.dessert)]
+        rightBox.innerHTML = `
         <h3><i> How about:</i></h3>
-        <h1>${randomFood}!</h1>
-    `
+        <h2>${randomSide}</h2>
+        <h2>${randomMainDish}</h2>
+        <h2>${randomDessert}</h2>`
+    }
 }
 
 
