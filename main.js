@@ -4,12 +4,19 @@ var rightBox = document.getElementById('right-box')
 var result = document.querySelector('#result')
 var selectedFood;
 var clearBtn = document.querySelector('#clear-button')
+var addRecipeBtn = document.querySelector('#add-recipe-button')
+var addNewBtn = document.querySelector('#add-new-button')
+var footer = document.querySelector('footer')
+var dropDown = document.getElementById('drop-down')
 
 letsCookBtn.addEventListener('click', function(){
     selected();
     cook();
 })
+
 clearBtn.addEventListener('click', clear)
+addRecipeBtn.addEventListener('click', showFooter)
+addNewBtn.addEventListener('click', addNew)
 
 function selected(){ 
     for (var i = 0; i < options.length; i++){
@@ -45,6 +52,22 @@ function clear(){
     result.innerHTML = ""
     result.innerHTML = '<img src="assets/cookpot.svg">'
     clearBtn.classList.add('hidden')
+}
+
+function showFooter(){
+    footer.classList.remove('hidden')
+}
+
+
+function addNew() {
+    footer.classList.remove('hidden')
+    clearBtn.classList.remove('hidden')
+    var userSelect = dropDown.options[dropDown.selectedIndex].value
+    var userRecipe = document.querySelector('#user-recipe').value
+    foodList[userSelect].push(userRecipe)
+    result.innerHTML = `
+         <h3><i>You just added:</i></h3>
+        <h1>${userRecipe}!</h1>`
 }
 
 

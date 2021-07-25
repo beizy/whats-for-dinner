@@ -43,7 +43,6 @@ header > h1 {
     padding: 0 6px;
     margin-right: 20px;
     font-size: 1em;
-    color:#95a5a6;
     background-color:white;
     border-radius: 4px;
     border-style:none;
@@ -124,4 +123,28 @@ main {
     margin-right: 30px;
 }
 
+footer {
+    background-color: rgba(225, 225, 225, .9);
+    height: 60px;
+    width: 100%;
+    margin: 0px;
+    padding-left: 30px;
+    position:absolute;
+    bottom:0px;
+    display:inline-flex;
+    align-items: center;
+    gap:50px;
+}
+
+#add-new-button {
+    background-color: #0fb9b1;
+    height: 30px;
+    width: 100px;
+    border-style: none;
+    border-radius: 4px;
+}
+
+footer input, footer label, footer select {
+    height: 30px;
+}
 
