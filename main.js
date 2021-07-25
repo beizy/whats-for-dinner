@@ -28,6 +28,7 @@ function selected(){
     }
 }
 
+
 function cook(){
     if (selectedFood !== 'entireMeal'){ 
         var randomFood = foodList[selectedFood][getRandomIndex(foodList[selectedFood])]
@@ -48,11 +49,13 @@ function cook(){
     }
 }
 
+
 function clear(){
     result.innerHTML = ""
     result.innerHTML = '<img src="assets/cookpot.svg">'
     clearBtn.classList.add('hidden')
 }
+
 
 function showFooter(){
     footer.classList.remove('hidden')
@@ -66,7 +69,7 @@ function addNew() {
     var userRecipe = document.querySelector('#user-recipe').value
     foodList[userSelect].push(userRecipe)
     result.innerHTML = `
-         <h3><i>You just added:</i></h3>
+        <h3><i>You just added:</i></h3>
         <h1>${userRecipe}!</h1>`
 }
 
